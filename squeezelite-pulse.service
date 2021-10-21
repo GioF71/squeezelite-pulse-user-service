@@ -1,0 +1,11 @@
+[Unit]
+Description=Squeezelite Pulse
+After=network.target sound.target
+
+[Service]
+ExecStart=/usr/bin/squeezelite -n squeezelite-pulse -o pulse
+ExecStop=/usr/bin/killall squeezelite
+
+[Install]
+WantedBy=default.target
+
